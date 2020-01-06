@@ -1,0 +1,1089 @@
+{
+	"development_card1": [
+		{
+			"id": 1,
+			"color": "onyx",
+			"score": 0,
+			"cost": {
+				"emerald": 3,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 2,
+			"color": "onyx",
+			"score": 0,
+			"cost": {
+				"emerald": 2,
+				"sapphire": 0,
+				"ruby": 1,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 3,
+			"color": "onyx",
+			"score": 0,
+			"cost": {
+				"emerald": 1,
+				"sapphire": 0,
+				"ruby": 3,
+				"diamond": 0,
+				"onyx": 1
+			}
+		},
+		{
+			"id": 4,
+			"color": "onyx",
+			"score": 0,
+			"cost": {
+				"emerald": 1,
+				"sapphire": 1,
+				"ruby": 1,
+				"diamond": 1,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 5,
+			"color": "onyx",
+			"score": 0,
+			"cost": {
+				"emerald": 1,
+				"sapphire": 2,
+				"ruby": 1,
+				"diamond": 1,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 6,
+			"color": "onyx",
+			"score": 0,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 2,
+				"ruby": 1,
+				"diamond": 2,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 7,
+			"color": "onyx",
+			"score": 1,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 4,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 8,
+			"color": "onyx",
+			"score": 0,
+			"cost": {
+				"emerald": 2,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 2,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 9,
+			"color": "diamond",
+			"score": 0,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 1,
+				"ruby": 0,
+				"diamond": 3,
+				"onyx": 1
+			}
+		},
+		{
+			"id": 10,
+			"color": "diamond",
+			"score": 0,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 3,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 11,
+			"color": "diamond",
+			"score": 1,
+			"cost": {
+				"emerald": 4,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 12,
+			"color": "diamond",
+			"score": 0,
+			"cost": {
+				"emerald": 1,
+				"sapphire": 1,
+				"ruby": 1,
+				"diamond": 0,
+				"onyx": 1
+			}
+		},
+		{
+			"id": 13,
+			"color": "diamond",
+			"score": 0,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 2,
+				"diamond": 0,
+				"onyx": 1
+			}
+		},
+		{
+			"id": 14,
+			"color": "diamond",
+			"score": 0,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 2,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 2
+			}
+		},
+		{
+			"id": 15,
+			"color": "diamond",
+			"score": 0,
+			"cost": {
+				"emerald": 2,
+				"sapphire": 2,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 1
+			}
+		},
+		{
+			"id": 16,
+			"color": "diamond",
+			"score": 0,
+			"cost": {
+				"emerald": 2,
+				"sapphire": 1,
+				"ruby": 1,
+				"diamond": 0,
+				"onyx": 1
+			}
+		},
+		{
+			"id": 17,
+			"color": "sapphire",
+			"score": 0,
+			"cost": {
+				"emerald": 2,
+				"sapphire": 0,
+				"ruby": 2,
+				"diamond": 1,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 18,
+			"color": "sapphire",
+			"score": 0,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 3
+			}
+		},
+		{
+			"id": 19,
+			"color": "sapphire",
+			"score": 0,
+			"cost": {
+				"emerald": 1,
+				"sapphire": 0,
+				"ruby": 1,
+				"diamond": 1,
+				"onyx": 1
+			}
+		},
+		{
+			"id": 20,
+			"color": "sapphire",
+			"score": 0,
+			"cost": {
+				"emerald": 1,
+				"sapphire": 0,
+				"ruby": 2,
+				"diamond": 1,
+				"onyx": 1
+			}
+		},
+		{
+			"id": 21,
+			"color": "sapphire",
+			"score": 1,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 4,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 22,
+			"color": "sapphire",
+			"score": 0,
+			"cost": {
+				"emerald": 3,
+				"sapphire": 1,
+				"ruby": 1,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 23,
+			"color": "sapphire",
+			"score": 0,
+			"cost": {
+				"emerald": 2,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 2
+			}
+		},
+		{
+			"id": 24,
+			"color": "sapphire",
+			"score": 0,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 1,
+				"onyx": 2
+			}
+		},
+		{
+			"id": 25,
+			"color": "emerald",
+			"score": 1,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 4
+			}
+		},
+		{
+			"id": 26,
+			"color": "emerald",
+			"score": 0,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 1,
+				"ruby": 1,
+				"diamond": 1,
+				"onyx": 1
+			}
+		},
+		{
+			"id": 27,
+			"color": "emerald",
+			"score": 0,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 1,
+				"ruby": 0,
+				"diamond": 2,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 28,
+			"color": "emerald",
+			"score": 0,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 3,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 29,
+			"color": "emerald",
+			"score": 0,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 1,
+				"ruby": 2,
+				"diamond": 0,
+				"onyx": 2
+			}
+		},
+		{
+			"id": 30,
+			"color": "emerald",
+			"score": 0,
+			"cost": {
+				"emerald": 1,
+				"sapphire": 3,
+				"ruby": 0,
+				"diamond": 1,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 31,
+			"color": "emerald",
+			"score": 0,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 1,
+				"ruby": 1,
+				"diamond": 1,
+				"onyx": 2
+			}
+		},
+		{
+			"id": 32,
+			"color": "emerald",
+			"score": 0,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 2,
+				"ruby": 2,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 33,
+			"color": "ruby",
+			"score": 0,
+			"cost": {
+				"emerald": 1,
+				"sapphire": 1,
+				"ruby": 0,
+				"diamond": 2,
+				"onyx": 1
+			}
+		},
+		{
+			"id": 34,
+			"color": "ruby",
+			"score": 0,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 3,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 35,
+			"color": "ruby",
+			"score": 0,
+			"cost": {
+				"emerald": 1,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 2,
+				"onyx": 2
+			}
+		},
+		{
+			"id": 36,
+			"color": "ruby",
+			"score": 0,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 1,
+				"diamond": 1,
+				"onyx": 3
+			}
+		},
+		{
+			"id": 37,
+			"color": "ruby",
+			"score": 1,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 4,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 38,
+			"color": "ruby",
+			"score": 0,
+			"cost": {
+				"emerald": 1,
+				"sapphire": 2,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 39,
+			"color": "ruby",
+			"score": 0,
+			"cost": {
+				"emerald": 1,
+				"sapphire": 1,
+				"ruby": 0,
+				"diamond": 1,
+				"onyx": 1
+			}
+		},
+		{
+			"id": 40,
+			"color": "ruby",
+			"score": 0,
+			"cost": {
+				"emerald": 2,
+				"sapphire": 0,
+				"ruby": 2,
+				"diamond": 0,
+				"onyx": 0
+			}
+		}
+	],
+	"development_card2": [
+	{
+			"id": 1,
+			"color": "onyx",
+			"score": 2,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 5,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 2,
+			"color": "onyx",
+			"score": 2,
+			"cost": {
+				"emerald": 4,
+				"sapphire": 1,
+				"ruby": 2,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 3,
+			"color": "onyx",
+			"score": 2,
+			"cost": {
+				"emerald": 5,
+				"sapphire": 0,
+				"ruby": 3,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 4,
+			"color": "onyx",
+			"score": 3,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 6
+			}
+		},
+		{
+			"id": 5,
+			"color": "onyx",
+			"score": 1,
+			"cost": {
+				"emerald": 2,
+				"sapphire": 2,
+				"ruby": 0,
+				"diamond": 3,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 6,
+			"color": "onyx",
+			"score": 1,
+			"cost": {
+				"emerald": 3,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 3,
+				"onyx": 2
+			}
+		},
+		{
+			"id": 7,
+			"color": "diamond",
+			"score": 1,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 3,
+				"ruby": 3,
+				"diamond": 2,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 8,
+			"color": "diamond",
+			"score": 3,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 6,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 9,
+			"color": "diamond",
+			"score": 2,
+			"cost": {
+				"emerald": 1,
+				"sapphire": 0,
+				"ruby": 4,
+				"diamond": 0,
+				"onyx": 2
+			}
+		},
+		{
+			"id": 10,
+			"color": "diamond",
+			"score": 2,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 5,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 11,
+			"color": "diamond",
+			"score": 2,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 5,
+				"diamond": 0,
+				"onyx": 3
+			}
+		},
+		{
+			"id": 12,
+			"color": "diamond",
+			"score": 1,
+			"cost": {
+				"emerald": 3,
+				"sapphire": 0,
+				"ruby": 2,
+				"diamond": 0,
+				"onyx": 2
+			}
+		},
+		{
+			"id": 13,
+			"color": "sapphire",
+			"score": 1,
+			"cost": {
+				"emerald": 2,
+				"sapphire": 2,
+				"ruby": 3,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 14,
+			"color": "sapphire",
+			"score": 3,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 6,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 15,
+			"color": "sapphire",
+			"score": 2,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 3,
+				"ruby": 0,
+				"diamond": 5,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 16,
+			"color": "sapphire",
+			"score": 1,
+			"cost": {
+				"emerald": 3,
+				"sapphire": 2,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 3
+			}
+		},
+		{
+			"id": 17,
+			"color": "sapphire",
+			"score": 2,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 1,
+				"diamond": 2,
+				"onyx": 4
+			}
+		},
+		{
+			"id": 18,
+			"color": "sapphire",
+			"score": 2,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 5,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 19,
+			"color": "emerald",
+			"score": 2,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 2,
+				"ruby": 0,
+				"diamond": 4,
+				"onyx": 1
+			}
+		},
+		{
+			"id": 20,
+			"color": "emerald",
+			"score": 2,
+			"cost": {
+				"emerald": 5,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 21,
+			"color": "emerald",
+			"score": 2,
+			"cost": {
+				"emerald": 3,
+				"sapphire": 5,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 22,
+			"color": "emerald",
+			"score": 1,
+			"cost": {
+				"emerald": 2,
+				"sapphire": 0,
+				"ruby": 3,
+				"diamond": 3,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 23,
+			"color": "emerald",
+			"score": 3,
+			"cost": {
+				"emerald": 6,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 24,
+			"color": "emerald",
+			"score": 1,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 3,
+				"ruby": 0,
+				"diamond": 2,
+				"onyx": 2
+			}
+		},
+		{
+			"id": 25,
+			"color": "ruby",
+			"score": 2,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 5
+			}
+		},
+		{
+			"id": 26,
+			"color": "ruby",
+			"score": 2,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 3,
+				"onyx": 5
+			}
+		},
+		{
+			"id": 27,
+			"color": "ruby",
+			"score": 2,
+			"cost": {
+				"emerald": 2,
+				"sapphire": 4,
+				"ruby": 0,
+				"diamond": 1,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 28,
+			"color": "ruby",
+			"score": 1,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 2,
+				"diamond": 2,
+				"onyx": 3
+			}
+		},
+		{
+			"id": 29,
+			"color": "ruby",
+			"score": 3,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 6,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 30,
+			"color": "ruby",
+			"score": 1,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 3,
+				"ruby": 2,
+				"diamond": 0,
+				"onyx": 3
+			}
+		}
+	]
+	,
+	"development_card3": [
+	{
+			"id": 1,
+			"color": "onyx",
+			"score": 3,
+			"cost": {
+				"emerald": 5,
+				"sapphire": 3,
+				"ruby": 3,
+				"diamond": 3,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 2,
+			"color": "onyx",
+			"score": 5,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 7,
+				"diamond": 0,
+				"onyx": 3
+			}
+		},
+		{
+			"id": 3,
+			"color": "onyx",
+			"score": 4,
+			"cost": {
+				"emerald": 3,
+				"sapphire": 0,
+				"ruby": 6,
+				"diamond": 0,
+				"onyx": 3
+			}
+		},
+		{
+			"id": 4,
+			"color": "onyx",
+			"score": 4,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 7,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 5,
+			"color": "diamond",
+			"score": 4,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 7
+			}
+		},
+		{
+			"id": 6,
+			"color": "diamond",
+			"score": 4,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 3,
+				"diamond": 3,
+				"onyx": 6
+			}
+		},
+		{
+			"id": 7,
+			"color": "diamond",
+			"score": 5,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 3,
+				"onyx": 7
+			}
+		},
+		{
+			"id": 8,
+			"color": "diamond",
+			"score": 3,
+			"cost": {
+				"emerald": 3,
+				"sapphire": 3,
+				"ruby": 5,
+				"diamond": 0,
+				"onyx": 3
+			}
+		},
+		{
+			"id": 9,
+			"color": "sapphire",
+			"score": 4,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 7,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 10,
+			"color": "sapphire",
+			"score": 3,
+			"cost": {
+				"emerald": 3,
+				"sapphire": 0,
+				"ruby": 3,
+				"diamond": 3,
+				"onyx": 5
+			}
+		},
+		{
+			"id": 11,
+			"color": "sapphire",
+			"score": 5,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 3,
+				"ruby": 0,
+				"diamond": 7,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 12,
+			"color": "sapphire",
+			"score": 4,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 3,
+				"ruby": 0,
+				"diamond": 6,
+				"onyx": 3
+			}
+		},
+		{
+			"id": 13,
+			"color": "emerald",
+			"score": 3,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 3,
+				"ruby": 3,
+				"diamond": 5,
+				"onyx": 3
+			}
+		},
+		{
+			"id": 14,
+			"color": "emerald",
+			"score": 4,
+			"cost": {
+				"emerald": 0,
+				"sapphire": 7,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 15,
+			"color": "emerald",
+			"score": 5,
+			"cost": {
+				"emerald": 3,
+				"sapphire": 7,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 16,
+			"color": "emerald",
+			"score": 4,
+			"cost": {
+				"emerald": 3,
+				"sapphire": 6,
+				"ruby": 0,
+				"diamond": 3,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 17,
+			"color": "ruby",
+			"score": 5,
+			"cost": {
+				"emerald": 7,
+				"sapphire": 0,
+				"ruby": 3,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 18,
+			"color": "ruby",
+			"score": 3,
+			"cost": {
+				"emerald": 3,
+				"sapphire": 5,
+				"ruby": 0,
+				"diamond": 3,
+				"onyx": 3
+			}
+		},
+		{
+			"id": 19,
+			"color": "ruby",
+			"score": 4,
+			"cost": {
+				"emerald": 6,
+				"sapphire": 3,
+				"ruby": 3,
+				"diamond": 0,
+				"onyx": 0
+			}
+		},
+		{
+			"id": 20,
+			"color": "ruby",
+			"score": 4,
+			"cost": {
+				"emerald": 7,
+				"sapphire": 0,
+				"ruby": 0,
+				"diamond": 0,
+				"onyx": 0
+			}
+		}
+	]
+}

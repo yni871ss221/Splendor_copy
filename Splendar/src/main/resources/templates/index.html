@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Chat Demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+	<link th:href="@{css/main.css}" rel="stylesheet">
+	<link th:href="@{https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css}" rel="stylesheet" >
+	<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+	<script th:src="@{https://code.jquery.com/ui/1.12.1/jquery-ui.js}"></script>
+	<script th:src="@{/webjars/angularjs/angular.min.js}"></script>
+	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+	<script th:src="@{/webjars/bootstrap/js/modal.js}"></script>
+	<script th:src="@{/webjars/sockjs-client/sockjs.min.js}"></script>
+	<script th:src="@{/webjars/stomp-websocket/stomp.min.js}"></script>
+	<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js}"></script>
+	<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/angular-moment/1.2.0/angular-moment.min.js}"></script>
+	<script th:src="@{/webjars/angularjs/angular-sanitize.min.js}"></script>
+	<script th:src="@{js/const/const.js}"></script>
+	<script th:src="@{js/common.js}"></script>
+	<script th:src="@{js/app.js}"></script>
+	<script th:src="@{js/controller.js}"></script>
+	<script th:src="@{js/constructor/player.js}"></script>
+	<script th:src="@{js/constructor/devCard_jewel.js}"></script>
+	<script th:src="@{js/constructor/token_jewel.js}"></script>
+	
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body ng-app="app" ng-controller="controller">	
+	<div id="username-page" ng-show="!connected">
+		<div class="username-page-container">
+			<h1 class="title">ニックネームを入力！</h1>
+			<from id="usernameForm" name="usernameForm">
+				<div class="form-group">
+					<input type="text" id="name" placeholder="ニックネームを10文字までで" autocomplete="off" class="form-control" ng-required="required" ng-model="my_player_info.username">
+				</div>
+				<div class="form-group">
+					<button id="send" class="default" type="submit" ng-click="startChatting()">入り口</button>
+				</div>
+			</from>
+		</div>
+	</div>
+
+	<div id="chat-page" ng-show="connected">
+		<div class="chat-container">
+			<div class="chat-header">
+				<div class="hidden-xl">
+					<img ng-src="{{my_player_info.avatar_url}}"/>
+					<div>{{my_player_info.username}}</div>
+				</div>
+			</div>
+			
+			<div class="main-contents-common left-side">
+				<div class="join_player hidden-xs">
+					<li ng-repeat="player in players">
+						<div class="join_player_info">
+							<img ng-src="{{player.avatar_url}}"/>
+							<div>{{player.name}}</div>
+						</div>
+					</li>
+				</div>
+				<ul id="conversation">
+					<li ng-repeat="mes in topicMessages" ng-class="getChatClass($index, topicMessages)">
+						<div ng-if="mes.type == 'JOIN'"><p>{{mes.sender}} が入室しました。</p></div>
+						<div ng-if="mes.type == 'LEAVE'"><p>{{mes.sender}} が退室しました。</p></div>
+						<div ng-if="mes.type == 'CHAT'">
+							<i style="background-color:#2196F3">{{mes.sender[0]}}</i>
+							<span>{{mes.sender}}</span>
+							<p ng-bind-html="mes.content"></p>
+							<div class="timestamp">{{mes.timestamp | amTimeAgo }}</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="main-contents-common main-contents">
+
+				<div class='nobleTilesField'>
+					<table>
+						<tr>
+							<td align="center" ng-repeat="noble in global.nobleTiles | orderBy: 'id'">
+								<div class="nobleTiles" ng-attr-id="{{noble.id}}">
+									<span ng-if="noble.value!=-1">
+											<div class="devCard_score">
+													{{gameData.noble_card_data[noble.value].score}}
+												</div>
+												<div class="devCard_costs">
+													<div class="dev_cost emerald" ng-if="gameData.noble_card_data[noble.value].cost.emerald != 0">{{gameData.noble_card_data[noble.value].cost.emerald}}</div>
+													<div class="dev_cost sapphire" ng-if="gameData.noble_card_data[noble.value].cost.sapphire != 0">{{gameData.noble_card_data[noble.value].cost.sapphire}}</div>
+													<div class="dev_cost ruby" ng-if="gameData.noble_card_data[noble.value].cost.ruby != 0">{{gameData.noble_card_data[noble.value].cost.ruby}}</div>
+													<div class="dev_cost diamond" ng-if="gameData.noble_card_data[noble.value].cost.diamond != 0">{{gameData.noble_card_data[noble.value].cost.diamond}}</div>
+													<div class="dev_cost onyx" ng-if="gameData.noble_card_data[noble.value].cost.onyx != 0">{{gameData.noble_card_data[noble.value].cost.onyx}}</div>
+												</div>
+									</span>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class='depCardLevel3Field gameField'>
+					<div ng-if='game_start_flg' class='depCardLevel3Deck devCard hidden-xs'>Splendor</div>
+					<table class='devCardTable'>
+						<tr>
+							<td align="center" ng-repeat="level3 in global.devCard.level3 | orderBy: 'id'">
+								<div class="devCard {{gameData.devlopment_card_deck3_data[level3.value].color}}" ng-attr-id="{{level3.id}}" ng-click="devCardLevel3Click(level3)">
+									<span ng-if="level3.value!=-1">
+										<div class="devCard_score">
+											{{gameData.devlopment_card_deck3_data[level3.value].score}}
+										</div>
+										<div class="devCard_costs">
+											<div class="dev_cost emerald" ng-if="gameData.devlopment_card_deck3_data[level3.value].cost.emerald != 0">{{gameData.devlopment_card_deck3_data[level3.value].cost.emerald}}</div>
+											<div class="dev_cost sapphire" ng-if="gameData.devlopment_card_deck3_data[level3.value].cost.sapphire != 0">{{gameData.devlopment_card_deck3_data[level3.value].cost.sapphire}}</div>
+											<div class="dev_cost ruby" ng-if="gameData.devlopment_card_deck3_data[level3.value].cost.ruby != 0">{{gameData.devlopment_card_deck3_data[level3.value].cost.ruby}}</div>
+											<div class="dev_cost diamond" ng-if="gameData.devlopment_card_deck3_data[level3.value].cost.diamond != 0">{{gameData.devlopment_card_deck3_data[level3.value].cost.diamond}}</div>
+											<div class="dev_cost onyx" ng-if="gameData.devlopment_card_deck3_data[level3.value].cost.onyx != 0">{{gameData.devlopment_card_deck3_data[level3.value].cost.onyx}}</div>
+										</div>
+									</span>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class='depCardLevel2Field gameField'>
+					<div ng-if='game_start_flg' class='depCardLevel2Deck devCard hidden-xs'>Splendor</div>
+					<table class='devCardTable'>
+						<tr>
+							<td align="center" ng-repeat="level2 in global.devCard.level2 | orderBy: 'id'">
+								<div class="devCard {{gameData.devlopment_card_deck2_data[level2.value].color}}" ng-attr-id="{{level2.id}}" ng-click="devCardLevel2Click(level2)">
+									<span ng-if="level2.value!=-1">
+											<div class="devCard_score">
+												{{gameData.devlopment_card_deck2_data[level2.value].score}}
+											</div>
+											<div class="devCard_costs">
+												<div class="dev_cost emerald" ng-if="gameData.devlopment_card_deck2_data[level2.value].cost.emerald != 0">{{gameData.devlopment_card_deck2_data[level2.value].cost.emerald}}</div>
+												<div class="dev_cost sapphire" ng-if="gameData.devlopment_card_deck2_data[level2.value].cost.sapphire != 0">{{gameData.devlopment_card_deck2_data[level2.value].cost.sapphire}}</div>
+												<div class="dev_cost ruby" ng-if="gameData.devlopment_card_deck2_data[level2.value].cost.ruby != 0">{{gameData.devlopment_card_deck2_data[level2.value].cost.ruby}}</div>
+												<div class="dev_cost diamond" ng-if="gameData.devlopment_card_deck2_data[level2.value].cost.diamond != 0">{{gameData.devlopment_card_deck2_data[level2.value].cost.diamond}}</div>
+												<div class="dev_cost onyx" ng-if="gameData.devlopment_card_deck2_data[level2.value].cost.onyx != 0">{{gameData.devlopment_card_deck2_data[level2.value].cost.onyx}}</div>
+											</div>
+									</span>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class='depCardLevel1Field gameField'>
+					<div ng-if='game_start_flg' class='depCardLevel1Deck devCard hidden-xs'>Splendor</div>
+					<table class='devCardTable'>
+						<tr>
+							<td align="center" ng-repeat="level1 in global.devCard.level1 | orderBy: 'id'">
+								<div class="devCard {{gameData.devlopment_card_deck1_data[level1.value].color}}" ng-attr-id="{{level1.id}}" ng-click="devCardLevel1Click(level1)">
+									<span ng-if="level1.value!=-1">
+											<div class="devCard_score">
+												{{gameData.devlopment_card_deck1_data[level1.value].score}}
+											</div>
+											<div class="devCard_costs">
+												<div class="dev_cost emerald" ng-if="gameData.devlopment_card_deck1_data[level1.value].cost.emerald != 0">{{gameData.devlopment_card_deck1_data[level1.value].cost.emerald}}</div>
+												<div class="dev_cost sapphire" ng-if="gameData.devlopment_card_deck1_data[level1.value].cost.sapphire != 0">{{gameData.devlopment_card_deck1_data[level1.value].cost.sapphire}}</div>
+												<div class="dev_cost ruby" ng-if="gameData.devlopment_card_deck1_data[level1.value].cost.ruby != 0">{{gameData.devlopment_card_deck1_data[level1.value].cost.ruby}}</div>
+												<div class="dev_cost diamond" ng-if="gameData.devlopment_card_deck1_data[level1.value].cost.diamond != 0">{{gameData.devlopment_card_deck1_data[level1.value].cost.diamond}}</div>
+												<div class="dev_cost onyx" ng-if="gameData.devlopment_card_deck1_data[level1.value].cost.onyx != 0">{{gameData.devlopment_card_deck1_data[level1.value].cost.onyx}}</div>
+											</div>
+									</span>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class='tokenField gameField'>
+					<table class='tokenTable'>
+						<tr>
+							<td align="center" ng-repeat="(key, value) in global.token">
+								<div class="token {{key}}" id="token_{{key}}" ng-click="tokenTilesClick(this)">{{value}}</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="main-contents-common right-side">
+				<div class="play-controll">
+						<li ng-attr_id="{{'gamePlayer_info_' + gamePlayer.value.name}}" ng-repeat="gamePlayer in gamePlayers | orderBy: 'no'">
+							<div class="game_player_info">
+								<img ng-src="{{gamePlayer.value.avatar_url}}"/>
+								<div class="player_name" style="color:black;">{{gamePlayer.value.name}}</div>
+								<div class="player_score">{{gamePlayer.value.score}}点</div>
+								<div class="player_noble_tiles">{{gamePlayer.value.nobleTiles.length}}</div>
+							</div>
+							<table>
+								<tr>
+									<td align="center" ng-repeat="(key, value) in gamePlayer.value.devCard">
+										<div class="player_devCard {{key}}" ng-click="browseDevCard(this, gamePlayer.value.name)">{{value.length}}</div>
+									</td>
+								</tr>	
+							</table>
+							<table>
+								<tr>
+									<td align="center" ng-repeat="(key, value) in gamePlayer.value.token">
+										<div class="player_token {{key}}">{{value}}</div>
+									</td>
+								</tr>	
+							</table>
+						</li>
+				</div>
+				<div class="start-game-table">
+					<button class="primary" type="submit" ng-click="sitTable()" ng-show="!my_player_info.game_start_flg && !gamePlayingFlg">席に着く</button>
+					<button class="primary" type="submit" ng-click="leaveTable()" ng-show="my_player_info.game_start_flg && !gamePlayingFlg">席を離れる</button>
+					<button class="primary" type="submit" ng-click="gameStart()" ng-show="gameStartButtonSwitch && !gamePlayingFlg">ゲーム開始</button>
+
+					<div ng-show="gamePlayingFlg">
+						<input type="radio" class="token_mode" id="mode1" ng-model="token_mode" value="get_another_token" ng-change="tokenModeChange()"><label for="mode1">別々のトークンを3枚</label>
+						<input type="radio" class="token_mode" id="mode2" ng-model="token_mode" value="get_same_token" ng-change="tokenModeChange()"><label for="mode2">同じトークンを2枚</label>
+						<input type="radio" class="token_mode" id="mode3" ng-model="token_mode" value="keep_dev_card" ng-change="tokenModeChange()"><label for="mode3">発展カードをキープ</label>
+
+						<table>
+							<tr>
+								<td align="center" ng-repeat="(key, value) in my_player_info.token">
+									<div class="player_token {{key}}">{{value}}</div>
+								</td>
+							</tr>	
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<form id="messageForm" name="messageForm">
+				<div class="form-group">
+					<div class="input-group clearfix message-input-area">
+						<input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control" ng-model="message" ng-required="true"></text>
+						<button class="primary" type="submit" ng-click="sendMessage()">送る</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="errorPanel" tabindex="-1" role="dialog" aria-labelledby="errorTitle" aria-hidden="false">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="errorTitle">System Error</h4>
+				</div>
+				<div class="modal-body">
+					<span id="errorMessage"></span>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--ゴールドジョーカー使用時にどのトークンに使用するかを選択するダイアログ-->
+	<div id="goldJokerDialog" title="ゴールドジョーカーの使用">
+		<div id="selecter"></div>
+	</div>
+
+	<!--プレイヤーが取得した発展カードを閲覧するためのダイアログ-->
+	<div id="browserDevCardDialog" title="発展カード一覧">
+		<div id="sentence"></div>
+	</div>
+</body>
+</html>
